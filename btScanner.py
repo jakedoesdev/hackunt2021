@@ -23,9 +23,19 @@ while True:
         "time": now             #current sys time
         }
 
+        t = time.localtime()
+        now = time.strftime("%S", t)
+        #print(now)
+        while (int(now)%10!=0):
+            #time.sleep(0)
+            t = time.localtime()
+            now = time.strftime("%S", t)
+            #print(now)
+            
         js_obj = json.dumps(dev_obj)
         print("Sending: ", js_obj)
-        #r = requests.post("https://pitracker.helpfulseb.com/api/track", data=js_obj)
+        r = requests.post("https://pitracker.helpfulseb.com/api/track", data=js_obj)
 
     print("Waiting...")
-    time.sleep(5)
+    time.sleep(2)
+
