@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style">
+
+<head>
+  <title>Pitracker</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="/assets/vendor/fonts/fontawesome.css">
+  <link rel="stylesheet" href="/assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="/assets/vendor/fonts/linearicons.css">
+  <link rel="stylesheet" href="/assets/vendor/fonts/open-iconic.css">
+  <link rel="stylesheet" href="/assets/vendor/fonts/pe-icon-7-stroke.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="/assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="/assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="/assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="/assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="/assets/vendor/css/rtl/uikit.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+
+  <!-- Load polyfills -->
+  <script src="/assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  <script src="/assets/vendor/js/material-ripple.js"></script>
+  <script src="/assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="/assets/vendor/js/theme-settings.js"></script>
+
+  <!-- Core scripts -->
+  <script src="/assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  <link rel="stylesheet" href="/assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.css">
+  <link rel="stylesheet" href="/assets/vendor/libs/datatables/datatables.css">
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-2">
+    <div class="layout-inner">
+
+      <!-- Layout sidenav -->
+      <div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-dark">
+
+        <!-- Brand demo (see assets/css/demo/demo.css) -->
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Pitracker</a>
+          <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
+            <i class="ion ion-md-menu align-middle"></i>
+          </a>
+        </div>
+
+        <div class="sidenav-divider mt-0"></div>
+
+        <!-- Links -->
+        <ul class="sidenav-inner py-1">
+
+          <li class="sidenav-item">
+            <a href="/" class="sidenav-link"><i class="sidenav-icon ion ion-md-speedometer"></i>
+              <div>Dashboard</div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- / Layout sidenav -->
+
+      <!-- Layout container -->
+      <div class="layout-container">
+        <!-- / Layout navbar -->
+
+        <!-- Layout content -->
+        <div class="layout-content">
+
+          <!-- Content -->
+          <div class="container-fluid flex-grow-1 container-p-y">
+
+            <h4 class="font-weight-bold py-3 mb-4">
+              Logs
+            </h4>
+
+            <div class="card">
+              <div class="card-datatable table-responsive">
+                <table id="user-list" class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Device ID</th>
+                      <th>Identifier</th>
+                      <th>RSSI</th>
+                      <th>Timestamp</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <!-- / Content -->
+
+          <!-- Layout footer -->
+          <nav class="layout-footer footer bg-footer-theme">
+            <div class="container-fluid d-flex flex-wrap justify-content-between text-center container-p-x pb-3">
+              <div class="pt-3">
+                <span class="footer-text font-weight-bolder">Pitracker</span> ©
+              </div>
+              <div>
+                <a href="https://devpost.com/software/bt-device-identifier-tracker" class="footer-link pt-3">About Us</a>
+              </div>
+            </div>
+          </nav>
+          <!-- / Layout footer -->
+
+        </div>
+        <!-- Layout content -->
+
+      </div>
+      <!-- / Layout container -->
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-sidenav-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core scripts -->
+  <script src="/assets/vendor/libs/popper/popper.js"></script>
+  <script src="/assets/vendor/js/bootstrap.js"></script>
+  <script src="/assets/vendor/js/sidenav.js"></script>
+
+  <!-- Libs -->
+  <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="/assets/vendor/libs/moment/moment.js"></script>
+  <script src="/assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.js"></script>
+  <script src="/assets/vendor/libs/datatables/datatables.js"></script>
+
+  <script src="assets/js/demo.js"></script>
+  <script src="/assets/js/reconnecting_websocket.js"></script>
+  <script>
+    $(document).ready(function() {
+
+
+      // $.get('/api/get-all-purchases', function(data) {
+      //   $(".transaction-list").html('');
+      //   for (element in data) {
+      //     $(".transaction-list").prepend('<p id="tid-' + data[element].id + '">' + status_icon[data[element].status] + ' <strong>$' + data[element].amt + '</strong> @ ' + data[element].merchant.name + '</p>');
+      //   }
+      // });
+      // $.get('/api/get-all-merchants', function(data) {
+      //   $("#merchant").html('<option>Choose a merchant...</option>').css('background', 'none').prop('disabled', false);
+      //   for (element in data) {
+      //     $("#merchant").append($("<option></option>")
+      //             .attr("value", data[element][0])
+      //             .text(data[element][1]));
+      //   }
+      // });
+
+      window.websocket = new ReconnectingWebSocket("wss://" + window.location.hostname + ":9101", "logs");
+
+      window.websocket_initialised = false;
+
+      var t = $('#user-list').DataTable({
+        order: [[0, 'desc']]
+      });
+
+      websocket.onopen = function(evt) {
+        console.log("WebSocket: CONNECTED");
+      };
+
+      websocket.onclose = function(evt) {
+        //console.log("Close", evt);
+        console.log("WebSocket: DISCONNECTED");
+      };
+
+      websocket.onmessage = function(evt) {
+        if (JSON.parse(evt.data)) {
+          var data = JSON.parse(evt.data);
+          console.log("WebSocket JSON message: ", data);
+
+
+          data.forEach(element => {
+
+            t.row.add( [
+              element.id,
+              element.device_id,
+              element.identifier,
+              element.rssi,
+              element.timestamp
+            ] ).draw( false );
+
+          })
+        }
+
+      };
+      websocket.onerror = function(evt) {
+        console.log("Error", evt);
+      };
+
+      console.log("dt", t);
+
+    });
+  </script>
+</body>
+
+</html>
